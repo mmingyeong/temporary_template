@@ -10,6 +10,13 @@ git clone https://github.com/mmingyeong/temporary_template.git
 # poetry 생성
 poetry init # pyproject.toml 생성
 poetry install # poetry.lock 생성
+poetry add black
+poetry add ruff
+
+# Linter
+black .
+ruff check
+ruff format
 
 # git repository 생성
 git init
@@ -18,11 +25,6 @@ git commit -m "first commit"
 git branch -M main
 git remote set-url origin https://{Personal_access_tokens}@{repository_address}
 git push -u origin main
-
-# Linter
-black .
-ruff check
-ruff format
 
 # 개발 후 저장할 경우
 git add .
