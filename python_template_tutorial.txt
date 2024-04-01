@@ -1,0 +1,31 @@
+24.04.03 수 KSPEC Python Template
+
+# 가상환경 설정 (conda)
+conda create -n test-kspec python=3.9
+conda activate test-kspec
+
+# python template으로 새 프로젝트 생성
+git clone https://github.com/mmingyeong/temporary_template.git
+
+# poetry 생성
+poetry init # pyproject.toml 생성
+poetry install # poetry.lock 생성
+
+# git repository 생성
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote set-url origin https://{Personal_access_tokens}@{repository_address}
+git push -u origin main
+
+# Linter
+black .
+ruff check
+ruff format
+
+# 개발 후 저장할 경우
+git add .
+git commit -m "commit message"
+git push -u origin main
+

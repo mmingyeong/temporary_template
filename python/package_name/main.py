@@ -9,10 +9,10 @@
 import operator
 
 
-__all__ = ('math', 'MyClass')
+__all__ = ("math", "MyClass")
 
 
-def math(arg1, arg2, arith_operator='+'):
+def math(arg1, arg2, arith_operator="+"):
     """Performs an arithmetic operation.
 
     This function accepts to numbers and performs an arithmetic operation
@@ -35,10 +35,12 @@ def math(arg1, arg2, arith_operator='+'):
 
     """
 
-    str_to_operator = {'+': operator.add,
-                       '-': operator.sub,
-                       '*': operator.mul,
-                       '/': operator.truediv}
+    str_to_operator = {
+        "+": operator.add,
+        "-": operator.sub,
+        "*": operator.mul,
+        "/": operator.truediv,
+    }
 
     return str_to_operator[arith_operator](arg1, arg2)
 
@@ -62,8 +64,7 @@ class MyClass(object):
 
     """
 
-    def __init__(self, arg1, arg2, kwarg1='a'):
-
+    def __init__(self, arg1, arg2, kwarg1="a"):
         self.name = arg1
 
     def do_something(self):
