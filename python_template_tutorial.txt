@@ -23,7 +23,7 @@ ruff format
 # git repository 생성
 git remote remove origin
 git init
-git add .
+git add .   #  변경한 모든 파일 업로드
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/mmingyeong/kspec-test.git
